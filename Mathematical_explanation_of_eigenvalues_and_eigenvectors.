@@ -1,0 +1,75 @@
+"""
+a
+import numpy as np
+np.median(a)
+
+
+Bir n × n ölçülü A matrisinin eigenvalue və eigenvectorları 
+aşağıdakı tənliklə müəyyən olunur:
+
+A v = λ v
+
+Burada:
+A – kvadrat matrisdir,
+v – 0-dan fərqli vektor (eigenvector),
+λ – skalyar qiymət (eigenvalue).
+
+İsbat
+Eigenvalue-ları tapmaq üçün aşağıdakı determinant tənliyi istifadə olunur:
+
+det(A - λI) = 0
+
+Bu determinantı sıfıra bərabərləşdirməklə, xarakteristik polinomu həll edirik 
+və eigenvalueları tapırıq.
+
+Nümunə
+Verilmiş matris üçün eigenvalue və eigenvectorları tapaq:
+
+A = | 2  1 |
+    | 1  2 |
+
+1. Xarakteristik determinantı yazırıq:
+
+| 2-λ   1  |
+| 1    2-λ | = 0
+
+2. Determinantı hesablayırıq:
+
+(2-λ)(2-λ) - (1 × 1) = 0
+λ² - 4λ + 3 = 0
+
+3. Kökləri tapırıq:
+
+(λ - 3)(λ - 1) = 0 ⇒ λ₁ = 3, λ₂ = 1
+
+Eigenvectorların tapılması
+Eigenvectorları tapmaq üçün A v = λ v tənliyini həll edirik.
+
+1. λ₁ = 3 üçün:
+
+(A - 3I)v = 0
+| 2-3   1  | | x | = | 0 |
+| 1    2-3 | | y |   | 0 |
+
+| -1   1  | | x | = | 0 |
+| 1   -1 | | y |   | 0 |
+
+İlk tənlikdən -x + y = 0 və x = y. Beləliklə, eigenvector:
+
+v₁ = | 1 |
+     | 1 |
+
+2. λ₂ = 1 üçün:
+
+(A - 1I)v = 0
+| 2-1   1  | | x | = | 0 |
+| 1    2-1 | | y |   | 0 |
+
+| 1   1  | | x | = | 0 |
+| 1   1 | | y |   | 0 |
+
+İlk tənlikdən x + y = 0 və x = -y. Beləliklə, eigenvector:
+
+v₂ = |  1 |
+     | -1 |
+"""
